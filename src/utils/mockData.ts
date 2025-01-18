@@ -16,8 +16,8 @@ export const fetchProductPage = async (
   // Simulate slow network with 3 second delay
   await new Promise(resolve => setTimeout(resolve, 3000));
 
-  // Randomly fail about 1/3 of the time
-  if (Math.random() < 0.33) {
+  // Randomly fail about 2/3 of the time
+  if (Math.random() < 0.66) {
     throw new Error('Failed to fetch products. Please try again.');
   }
 
